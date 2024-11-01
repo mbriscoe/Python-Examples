@@ -9,10 +9,9 @@ os.system("clear")
 
 # define the suits and numbers of cards (tuples because they won't change)
 suits = ("Hearts", "Clubs", "Diamonds", "Spades")
-numbers = (14, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+numbers = (range(2, 15))
 
 # setup the game
-deck = []
 
 # current hands
 player1_card = []
@@ -25,6 +24,7 @@ player2_pack = []
 
 # create the deck of cards
 def create_deck():
+    deck = []
     # loop through the suits
     for suit in suits:
         # loop through the numbers
@@ -40,14 +40,14 @@ def create_deck():
 
 # process the card number to display the card name
 def process_card(card_number):
-    if card_number == 14:
-        return "Ace"
-    elif card_number == 11:
+    if card_number == 11:
         return "Jack"
     elif card_number == 12:
         return "Queen"
     elif card_number == 13:
         return "King"
+    elif card_number == 14:
+        return "Ace"
     else:
         return card_number
 
