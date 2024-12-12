@@ -1,3 +1,8 @@
+import os
+
+# Clear the screen
+os.system('clear')
+
 # Create an empty list
 my_list = []
 

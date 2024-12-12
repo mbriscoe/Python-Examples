@@ -1,5 +1,5 @@
 def fizz_buzz_short(number):
-    return f"{ '' if number % 3 else 'Fizz'}{'' if number % 5 else 'Buzz' }" or number
+    return f"{'' if number % 3 else 'Fizz'}{'' if number % 5 else 'Buzz'}" or number
 
 
 for i in range(1, 31):

@@ -9,7 +9,6 @@ class Bird:
     """
 
     # CLASS ATTRIBUTES ARE VARIABLES DECLARED OUTSIDE THE CONSTRUCTOR
-    color = "black"
     numBirds = 0
 
     def __init__(self, kind, call):
@@ -25,33 +24,32 @@ class Bird:
         """
         describe the bird
         """
-        return f"{self.kind} goes {self.call}. It's color is {self.color}.\n"
+        return f"{self.kind} goes {self.call}."
 
 
-class Big_bird(Bird):
-    beak_color = "yellow"
+# class Big_bird(Bird):
+#     beak_color = "yellow"
 
-    def __init__(self, kind, call, wingspan):
-        self.wingspan = wingspan
-        super().__init__(kind, call)
+#     def __init__(self, kind, call, wingspan):
+#         self.wingspan = wingspan
+#         super().__init__(kind, call)
 
-    def description(self):
-        """
-        describe the Big_bird
-        """
+#     def description(self):
+#         """
+#         describe the Big_bird
+#         """
 
-        return f"{self.kind} goes {self.call} and has a wing span of {self.wingspan} feet. It's color is {self.color}.\n"
+#         return f"{self.kind} goes {self.call} and has a wing span of {self.wingspan} feet. It's beak color is {self.beak_color}."
 
 
 owl = Bird("Owl", "Twit Twoo")
 
 crow = Bird("Crow", "Caw")
-crow.color = "brown"
 
-eagle = Big_bird("Eagle", "Screech", 25)
-eagle.color = "White"
-eagle.beak_color = "red"
+# eagle = Big_bird("Eagle", "Screech", 25)
+# eagle.color = "White"
+# eagle.beak_color = "red"
 
 print(owl.description())
 print(crow.description())
-print(eagle.description())
+# print(eagle.description())
