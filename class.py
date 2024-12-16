@@ -4,52 +4,46 @@ os.system("clear")
 
 
 class Bird:
-    """
-    Bird class
-    """
-
-    # CLASS ATTRIBUTES ARE VARIABLES DECLARED OUTSIDE THE CONSTRUCTOR
+    # CLASS ATTRIBUTE
     numBirds = 0
 
+    # CONSTRUCTOR
     def __init__(self, kind, call):
-        # properties
-        # INSTANCE ATTRIBUTES DECLARED INSIDE CONSTRUCTOR
+        # INSTANCE VARTIABLES/PROPERTIES
         self.kind = kind
         self.call = call
         Bird.numBirds += 1
-        print(f"Number of birds: {Bird.numBirds}")
+        print(f"Number of birds = {Bird.numBirds}")
 
-    # behaviour
-    def description(self):
-        """
-        describe the bird
-        """
+    # BEHAVIOUR
+    def describe(self):
         return f"{self.kind} goes {self.call}."
 
 
-# class Big_bird(Bird):
-#     beak_color = "yellow"
+class Big_Bird(Bird):
 
-#     def __init__(self, kind, call, wingspan):
-#         self.wingspan = wingspan
-#         super().__init__(kind, call)
+    def __init__(self, kind, call, wingspan):
+        self.wingspan = wingspan
+        super().__init__(kind, call)
 
-#     def description(self):
-#         """
-#         describe the Big_bird
-#         """
+    def describe(self):
+        return f"{self.kind} goes {self.call}, and has a wingspan of {self.wingspan} feet!"
 
-#         return f"{self.kind} goes {self.call} and has a wing span of {self.wingspan} feet. It's beak color is {self.beak_color}."
+
+class Really_big_Bird(Big_Bird):
+    def __init__(self, kind, call, wingspan, age):
+        self.age = age
+        super().__init__(kind, call, wingspan)
+
+    def describe(self):
+        return f"{self.kind} goes {self.call}, and has a wingspan of {self.wingspan} feet! It is {self.age} years old and massive!"
 
 
 owl = Bird("Owl", "Twit Twoo")
-
 crow = Bird("Crow", "Caw")
 
-# eagle = Big_bird("Eagle", "Screech", 25)
-# eagle.color = "White"
-# eagle.beak_color = "red"
+eagle = Big_Bird("Eagle", "Screech", 25)
 
-print(owl.description())
-print(crow.description())
-# print(eagle.description())
+vulture = Really_big_Bird("Vulture", "Sqawk", 60, 200)
+
+print(vulture.describe())
