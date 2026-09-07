@@ -1,0 +1,5 @@
+user = input(" Please enter your name: ")
+print(user.lower())
+print(user.replace("taylor", "Taylor"))
+cleaned_text = user.strip()
+print(cleaned_text.replace(" ", ""), "@test.com", sep="")

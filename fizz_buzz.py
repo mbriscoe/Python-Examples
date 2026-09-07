@@ -7,16 +7,16 @@ for i in range(1, 31):
 
 
 # LONG WAY ROUND
-def fizz_buzz_long(number):
-    if not (number % 15):
+def fizz_buzz(number):
+    if not number % 15:
         print("FizzBuzz")
-    elif not (number % 3):
+    elif not number % 3:
         print("Fizz")
-    elif not (number % 5):
+    elif not number % 5:
         print("Buzz")
     else:
         print(number)
 
 
 for i in range(1, 31):
-    fizz_buzz_long(i)
+    fizz_buzz(i)

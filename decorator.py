@@ -11,5 +11,11 @@ def print_article_title(title):
     return "Article Title: " + title
 
 
-result = print_article_title("How To Be Great!")
+@add_author
+def quote_of_the_day(quote):
+    return "Quote of the day: " + quote
+
+
+result = quote_of_the_day("We love mixins!")
+
 print(result)

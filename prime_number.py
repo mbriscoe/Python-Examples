@@ -1,5 +1,5 @@
 i = 2
-while i < 10:
+while i < 100:
     j = 2
     while j <= i/j:
         if not i % j:
